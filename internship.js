@@ -1,7 +1,8 @@
 let internships = [];
 
 function loadInternships() {
-    events = JSON.parse(localStorage.getItem('internships')) || [];
+    const storedInternships = localStorage.getItem('internships');
+    internships = storedInternships ? JSON.parse(storedInternships) : [];
     displayInternships(internships);
 }
 
