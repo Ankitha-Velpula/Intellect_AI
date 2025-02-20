@@ -20,9 +20,10 @@ function displayInternships(internshipsToShow) {
             <p>Date: ${internship.date}</p>
             <p>${internship.duration}</p>
             <p>Email: ${internship.stipend}</p>
-            <p>Website: <a href="${internship.contact.website}" target="_blank">${event.contact.website}</a></p>
-        `;
-        internshipsContainer.appendChild(card);
+            <p><strong>Website:</strong> 
+            ${internship.contact?.website ? `<a href="${internship.contact.website}" target="_blank">${internship.contact.website}</a>` : "N/A"}
+            </p>
+            internshipsContainer.appendChild(card);
     });
 }
 
