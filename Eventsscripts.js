@@ -35,4 +35,5 @@ function filterByLocation() {
     displayEvents(filteredEvents);
 }
 
-window.addEventListener("load", loadEvents);
+window.addEventListener("DOMContentLoaded", loadEvents);
+
