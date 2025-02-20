@@ -28,8 +28,10 @@ function displayEvents(eventsToShow) {
 }
 
 function filterByLocation() {
-    const searchTerm = document.getElementById("location-search").value.toLowerCase();
-    const filteredEvents = events.filter(event => event.type === "offline" && event.location.toLowerCase().includes(searchTerm));
+    const searchTerm = document.getElementById("location-search").value.trim().toLowerCase();
+    const filteredEvents = searchTerm
+    ? events.filter(event => event.type === "offline" && event.location.toLowerCase().includes(searchTerm))
+    : events;
     displayEvents(filteredEvents);
 }
 
