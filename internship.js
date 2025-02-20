@@ -27,4 +27,4 @@ function displayInternships(internshipsToShow) {
     });
 }
 
-window.addInternshipListener("load", loadInternships);
+window.addEventListener("DOMContentLoaded", loadInternships);
