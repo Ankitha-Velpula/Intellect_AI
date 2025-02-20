@@ -1,7 +1,8 @@
 let events = [];
 
 function loadEvents() {
-    events = JSON.parse(localStorage.getItem('events')) || [];
+    const storedEvents = localStorage.getItem('events');
+    events = storedEvents ? JSON.parse(storedEvents) : [];
     displayEvents(events);
 }
 
